@@ -1,0 +1,41 @@
+.add-option-error{
+    color: $off-white;
+    font-style: italic;
+    margin: $m-size 0 0 0;
+    padding: 0 $m-size;
+}
+
+.add-option{
+    display: flex;
+    flex-direction: column;
+    //stacks stuff on top of each other - input and button
+    padding: $m-size;
+}
+
+.add-option__input{
+    background: $dark-blue;
+    border: none;
+    border-bottom: .3rem solid darken($dark-blue, 10%);
+    flex-grow: 1;
+    //margin-right: $s-size;
+    margin: 0 0 $s-size 0;
+    color: $off-white;
+    padding: $s-size;
+}
+
+//makes input variant as screen gets smaller and larger
+
+// @media (min-width: 45rem) {
+//     *{
+//         color: red;
+//     }
+// }
+
+@media (min-width: $desktop-breakpoint) {
+    .add-option{
+        flex-direction: row;
+    }
+    .add-option__input {
+        margin: 0 $s-size 0 0;
+    }
+}

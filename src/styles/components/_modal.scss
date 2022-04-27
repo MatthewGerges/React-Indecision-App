@@ -1,0 +1,49 @@
+ 
+.ReactModalPortal>div {
+    opacity: 0;
+  }
+
+//animation of modal showing up
+.ReactModalPortal .ReactModal__Overlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    //aligns horizontally
+    transition: opacity 200ms ease-in-out;
+}
+
+
+
+//>div tagetting divs that are direct descendats
+//opacity goes from zero to 1 after transition
+.ReactModalPortal .ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+//200 ms from opacity going from visible to inv
+.ReactModalPortal .ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+.modal{
+    background: $light-blue;
+    color: white;
+    max-width: 30rem;
+    outline: none;
+    padding: $m-size;
+    text-align: center;
+}
+
+//element selectors
+
+.modal__title{
+    margin: 0 0 $l-size 0;
+}
+
+.modal__body{
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 0 0 $l-size 0;
+    word-break: break-all;
+    //breaks up really long words into multiple lines
+}

@@ -1,0 +1,45 @@
+.big-button{
+    background: $purple;
+    border: none;
+    border-bottom: .6rem solid darken($purple, 10%);
+    //darken takes color as first argument and how much percent to darken by as 2nd arg
+    color: white;
+    font-weight: bold;
+    font-size: $l-size;
+    width: 100%;
+    //will take up whole width - all 60 rems of it
+    margin-bottom: $m-size;
+    //margin bottom puts spacing underneath btn
+    padding: 2.4rem;
+}
+
+//makes it faded when button is disabled
+.big-button:disabled{
+    opacity: .5;
+}
+
+//smaller buttons
+
+.button{
+    background: $purple;
+    border: none;
+    border-bottom: .3rem solid darken($purple, 10%);
+    color: white;
+    font-weight: 500;
+    padding: $s-size;
+}
+
+.button--link{
+    background: none;
+    border: none;
+    color: $off-white;
+    padding: 0
+}
+
+@media (min-width: $desktop-breakpoint)
+{
+    .big-button{
+        margin-bottom: $xl-size;
+    }
+}
+
